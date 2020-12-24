@@ -38,7 +38,7 @@ jobs:
       env:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
         IBM_ORG: ${{ secrets.IBM_ORGS }}
-        IBM_SPS: ${{ secrets.IBM_SPS }}:  
+        IBM_SPS: ${{ secrets.IBM_SPS }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud cf target -o "$IBM_ORG" -s "$IBM_SPS"
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
